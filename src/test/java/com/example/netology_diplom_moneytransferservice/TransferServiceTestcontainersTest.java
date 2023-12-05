@@ -14,14 +14,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TransferServiceTestcontainersTest {
-    /*
-    ToDO После упаковки проекта Maven/package и создания образа командой 'docker build -t restapp'
-    ToDO можно раскомментировать строки и запускать тест
-     */
+
+
         @Autowired
         private TestRestTemplate restTemplate;
 
-        private static final GenericContainer<?> appRestApi = new GenericContainer<>("restappdiplom3")
+        private static final GenericContainer<?> appRestApi = new GenericContainer<>("restappdiplom")
                 .withExposedPorts(5500);
 
         @BeforeAll
